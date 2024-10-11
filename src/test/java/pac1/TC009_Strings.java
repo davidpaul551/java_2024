@@ -16,6 +16,11 @@ public class TC009_Strings {
 		System.out.println("Index of l in Str2 is : "+ Str2.indexOf("l"));
 		System.out.println("SubString of str2 is : "+Str2.substring(1,4));
 		System.out.println("Value Of : "+ Str1.valueOf(30));
+		StringBuffer s = new StringBuffer("Apple");
+		System.out.println("StringBuffer is : "+s.append(Str2));
+		StringBuilder Str4 = new StringBuilder("Apple");
+		System.out.println("StringBuilder is : "+Str4);
+		
 		
 
 	}

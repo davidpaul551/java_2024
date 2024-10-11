@@ -1,9 +1,9 @@
 package pac1;
-//import java.util.Scanner;
-//public class java_LabBook {
-
+import java.util.Scanner;
 import pac1.TC007_Enum.Gender;
+//1.6
 
+//public class java_LabBook {
 //public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//1.4
@@ -145,6 +145,7 @@ public class java_LabBook {
 
 
 //8
+/*
 public class java_LabBook  {
 	String firstName;
 	String secondName;
@@ -186,8 +187,81 @@ public class java_LabBook  {
 			java_LabBook obj=new java_LabBook("David","Paul",Gender.MALE);
 			System.out.println("First name : "+obj.getFirstName());
 			System.out.println("Second Name : "+obj.getSecondName());
-			System.out.println("Gender : "+obj.getGender());			
+			System.out.println("Gender : "+obj.getGender());	
+			
 		}
 	}
+	*/
+
+//9
+
+
+public class java_LabBook {
+	public Action(String Str1,int n) {
+		switch(n) {
+		case(1){
+			return Str1+Str1;
+		}
+		case(2){
+			for(int i = 0 ;i<Str1.length();i++) {
+				if(i%2==1) {
+					Str1.CharAt(i)=="#";
+				}
+				
+			}
+		}
+		case(3){
+			
+		}
+	}
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String : ");
+		String Str1 = sc.nextLine();
+		
+		System.out.println("Enter number between 1-4 : ");
+		int n = sc.nextInt();
+		String result=Action(n);
+		System.out.println("Result : "+ result);
+		
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
