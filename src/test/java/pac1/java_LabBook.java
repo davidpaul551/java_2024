@@ -175,26 +175,19 @@ public class java_LabBook  {
 	    public void setGender(Gender gender) {
 	        this.gender = gender;
 	    }
-		
-
-
+	    
 		public java_LabBook(String firstName,String secondName, Gender gender) {
 		this.firstName=firstName;
 		this.secondName=secondName;
-		this.gender=gender;
-		
+		this.gender=gender;		
 	}
-
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
 			java_LabBook obj=new java_LabBook("David","Paul",Gender.MALE);
 			System.out.println("First name : "+obj.getFirstName());
 			System.out.println("Second Name : "+obj.getSecondName());
-			System.out.println("Gender : "+obj.getGender());
-			
-
+			System.out.println("Gender : "+obj.getGender());			
 		}
-
 	}
 
 
