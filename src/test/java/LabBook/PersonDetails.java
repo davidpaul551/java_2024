@@ -1,6 +1,7 @@
-package pac1;
+package LabBook;
 
-public class Person {
+
+public class PersonDetails {
 	String firstName;
 	String secondName;
 	char gender;
@@ -29,7 +30,7 @@ public class Person {
 	}
 
 
-public Person(String firstName,String secondName, char gender) {
+public PersonDetails(String firstName,String secondName, char gender) {
 	this.firstName=firstName;
 	this.secondName=secondName;
 	this.gender=gender;
@@ -38,7 +39,7 @@ public Person(String firstName,String secondName, char gender) {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Person obj=new Person("David","Paul",'M');
+		PersonDetails obj=new PersonDetails("David","Paul",'M');
 		System.out.println("First name : "+obj.getFirstName());
 		System.out.println("Second Name : "+obj.getSecondName());
 		System.out.println("Gender : "+obj.getGender());
@@ -47,3 +48,4 @@ public Person(String firstName,String secondName, char gender) {
 	}
 
 }
+
