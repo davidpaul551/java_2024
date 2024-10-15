@@ -1,5 +1,6 @@
 package pac1;
 import java.util.Scanner;
+import java.util.concurrent.atomic.*;
 import pac1.TC007_Enum.Gender;
 //1.6
 
@@ -195,7 +196,7 @@ public class java_LabBook  {
 
 //9
 
-
+/*
 public class java_LabBook {
 	public Action(String Str1,int n) {
 		switch(n) {
@@ -221,6 +222,8 @@ public class java_LabBook {
 	
 	
 	
+	
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a String : ");
@@ -237,7 +240,149 @@ public class java_LabBook {
 }
 
 
+*/
 
+//10  POSITIVE STRING(ASCENDING ORDER ASCII VALUES)
+
+/*
+public class java_LabBook {
+	
+	public static boolean isPositiveString( String Str1) {
+		
+		for (int i=0 ;i<Str1.length()-1;i++) {
+			if(Str1.charAt(i)>Str1.charAt(i+1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a String : ");
+		String Str1 = sc.nextLine();
+		Str1=Str1.toLowerCase();
+		System.out.println("Entered string is : "+Str1);
+		
+		
+		if(isPositiveString(Str1)) {
+			System.out.println("String is positive");
+		}else {
+			System.out.println("String is Negative");	
+		}
+	}
+}
+*/
+
+
+//INHREITANCE AND POLYMORPHISM
+
+//1
+class Person_1 {
+    String Name;
+    float age;
+    
+    public Person_1(String Name, float age) {
+        this.Name = Name;
+        this.age = age;
+    }
+    
+    public String getName() {
+        return Name;
+    }
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+    
+    public float getAge() {
+        return age;
+    }
+    public void setAge(float age) {
+        this.age = age;
+    }
+}
+
+class Account {
+    long accNum;
+    double balance;
+    Person_1 AccHolder;
+
+    public Account(long accNum, double balance, Person_1 AccHolder) {
+        this.accNum = accNum;
+        this.balance = balance;
+        this.AccHolder = AccHolder;
+    }
+    
+    public long getAccNum() {
+        return accNum;
+    }
+    public void setAccNum(long accNum) {
+        this.accNum = accNum;
+    }
+    
+    public double getBalance() {
+        return balance;
+    }
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    
+    public Person_1 getAccHolder() {
+        return AccHolder;
+    }
+    public void setAccHolder(Person_1 AccHolder) {
+        this.AccHolder = AccHolder;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Successfully deposited $" + amount + ". New balance: $" + balance);
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+    
+    // Method to withdraw money
+    public void withDraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Successfully withdrew $" + amount + ". Remaining balance: $" + balance);
+        } else if (amount > balance) {
+            System.out.println("Insufficient balance.");
+        } else {
+            System.out.println("Withdrawal amount must be positive.");
+        }
+    }
+}
+
+public class java_LabBook {
+    public static void main(String[] args) {
+        // Smith's account
+    	Person_1 smith = new Person_1("Smith", 30);
+        Account smithAccount = new Account(12345, 2000, smith);
+        System.out.println("Account holder: " + smith.getName());
+        System.out.println("Account number: " + smithAccount.getAccNum());
+        System.out.println("Account balance: $" + smithAccount.getBalance());
+        
+        // Deposit and withdraw for Smith
+        smithAccount.deposit(500);   // Deposit $500 into Smith's account
+        smithAccount.withDraw(300);  // Withdraw $300 from Smith's account
+
+        System.out.println();
+
+        // Kathy's account
+        Person_1 kathy = new Person_1("Kathy", 24);
+        Account kathyAccount = new Account(1234, 3000, kathy);
+        System.out.println("Account holder: " + kathy.getName());
+        System.out.println("Account number: " + kathyAccount.getAccNum());
+        System.out.println("Account balance: $" + kathyAccount.getBalance());
+        
+        // Deposit and withdraw for Kathy
+        kathyAccount.deposit(1000);  // Deposit $1000 into Kathy's account
+        kathyAccount.withDraw(3500); // Try to withdraw $3500 (more than balance)
+    }
+}
 
 
 
