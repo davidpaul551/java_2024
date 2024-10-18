@@ -11,25 +11,23 @@ public class EmployeeSystem {
         Scanner scanner = new Scanner(System.in);
         EmployeeService service = new EmployeeServiceImp();
 
-        // Get employee details from user
         System.out.print("Enter Employee ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter Employee Name: ");
         String name = scanner.nextLine();
         System.out.print("Enter Employee Salary: ");
         double salary = scanner.nextDouble();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine(); 
         System.out.print("Enter Employee Designation: ");
         String designation = scanner.nextLine();
 
-        // Create employee object
         Employee employee = new Employee(id, name, salary, designation);
 
-        // Display employee details
+        //employee details
         service.getEmployeeDetails(employee);
 
-        // Display the insurance scheme
+        //insurance scheme
         System.out.println("Insurance Scheme: " + service.findInsuranceScheme(employee));
 
         scanner.close();

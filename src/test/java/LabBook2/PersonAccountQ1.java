@@ -57,7 +57,6 @@ class Account {
         this.AccHolder = AccHolder;
     }
 
-    // Method to deposit money
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -67,7 +66,6 @@ class Account {
         }
     }
     
-    // Method to withdraw money
     public void withDraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -82,28 +80,24 @@ class Account {
 
 public class PersonAccountQ1 {
     public static void main(String[] args) {
-        // Smith's account
     	Person smith = new Person("Smith", 30);
         Account smithAccount = new Account(12345);
         System.out.println("Account holder: " + smith.getName());
         System.out.println("Account number: " + smithAccount.getAccNum());
         System.out.println("Account balance: $" + smithAccount.getBalance());
         
-        // Deposit and withdraw for Smith
-        smithAccount.deposit(500);   // Deposit $500 into Smith's account
-        smithAccount.withDraw(300);  // Withdraw $300 from Smith's account
+        smithAccount.deposit(500);   
+        smithAccount.withDraw(300);  
 
         System.out.println();
 
-        // Kathy's account
         Person kathy = new Person("Kathy", 24);
         Account kathyAccount = new Account(1234);
         System.out.println("Account holder: " + kathy.getName());
         System.out.println("Account number: " + kathyAccount.getAccNum());
         System.out.println("Account balance: $" + kathyAccount.getBalance());
         
-        // Deposit and withdraw for Kathy
-        kathyAccount.deposit(1000);  // Deposit $1000 into Kathy's account
-        kathyAccount.withDraw(3500); // Try to withdraw $3500 (more than balance)
+        kathyAccount.deposit(1000);  
+        kathyAccount.withDraw(3500); 
     }
 }
