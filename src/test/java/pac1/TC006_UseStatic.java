@@ -3,7 +3,7 @@ package pac1;
 public class TC006_UseStatic {
 	static int num1=3;
 	static int num2;
-	public static final a=5;
+	public static final int a=5;
 	static {
 		System.out.println("Static Block");
 		num2=num1*3;
