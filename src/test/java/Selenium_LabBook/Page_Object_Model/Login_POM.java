@@ -1,3 +1,5 @@
+
+
 package Selenium_LabBook.Page_Object_Model;
 
 import org.openqa.selenium.By;
@@ -15,14 +17,15 @@ public class Login_POM {
 	}
 		
 		
-	void enterUserName(String email) {
+	public void enterUserName(String email) {
 		driver.findElement(username).sendKeys(email);		
 	}
-	void enterPassword(String pass) {
+	public void enterPassword(String pass) {
 		driver.findElement(password).sendKeys(pass);
 	}
 	void clickloginButton() {
 		driver.findElement(loginButton).click();
 	}
 }
+
 

@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_LabBook.Page_Object_Model.Login_PageFactory_EXCEL_extentReport">
+      <class name="com.opencart.testcases.Login_PageFactory_EXCEL_extentReport">
         <methods>
-          <include name="login"/>
+          <include name="login" invocation-numbers="1"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Selenium_LabBook.Page_Object_Model.Login_PageFactory_EXCEL_extentReport -->
+      </class> <!-- com.opencart.testcases.Login_PageFactory_EXCEL_extentReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
